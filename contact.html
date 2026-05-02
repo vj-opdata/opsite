@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - OnPurpose Data</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Inter:wght@300;400;500;600&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="OnPurpose Data Home">
+        <img src="images/logo.png" alt="OnPurpose Data Logo" />
+      </a>
+
+      <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="menu" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-section">
+      <div class="container contact-inner">
+        <div class="contact-copy">
+          <h1>Contact Us</h1>
+          <hr>
+          <p>
+            Tell us what you are working on, where your data feels stuck, or what kind of support would make your next step easier.
+          </p>
+        </div>
+
+        <div class="contact-form-area">
+          <form id="contact-form" class="contact-form">
+            <div class="form-field">
+              <label for="user_name">Name</label>
+              <input id="user_name" name="user_name" type="text" autocomplete="name" required>
+            </div>
+
+            <div class="form-field">
+              <label for="user_email">Email</label>
+              <input id="user_email" name="user_email" type="email" autocomplete="email" required>
+            </div>
+
+            <div class="form-field">
+              <label for="organization">Organization</label>
+              <input id="organization" name="organization" type="text" autocomplete="organization">
+            </div>
+
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="7" required></textarea>
+            </div>
+
+            <button class="btn contact-submit" type="submit">Send Message</button>
+            <p id="form-status" class="form-status" aria-live="polite"></p>
+          </form>
+
+          <div id="contact-thank-you" class="contact-thank-you" hidden>
+            <h2>Thank you!</h2>
+            <p>Thank you for your message. We will respond to your request within the next business day.</p>
+            <button id="send-another-message" class="btn contact-submit" type="button">Send another message</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span data-current-year>2026</span> OnPurpose Data. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
